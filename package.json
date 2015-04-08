@@ -1,0 +1,14 @@
+{
+  "name": "bandit",
+  "version": "0.0.1",
+  "description": "Bandit game framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dan Caragea",
+  "license": "MIT",
+  "dependencies": {
+    "pixi.js": "^2.2.9"
+  }
+}
