@@ -1,0 +1,56 @@
+{
+  "disallowAnonymousFunctions": true,
+  "disallowKeywordsOnNewLine": ["else", "catch"],
+  "disallowMixedSpacesAndTabs": true,
+  "disallowMultipleLineStrings": true,
+  "disallowMultipleSpaces": true,
+  "disallowMultipleVarDecl": true,
+  "disallowNewlineBeforeBlockStatements": true,
+  "disallowOperatorBeforeLineBreak": ["+", "."],
+  "disallowEmptyBlocks": true,
+
+  "disallowQuotedKeysInObjects": true,
+  "disallowTrailingWhitespace": true,
+  "disallowYodaConditions": true,
+  "disallowKeywords": ["with"],
+  "disallowMultipleLineBreaks": true,
+  "requireParenthesesAroundIIFE": true,
+  "requireBlocksOnNewline": true,
+  "requireCommaBeforeLineBreak": true,
+  "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
+  "requireLineFeedAtFileEnd": true,
+  "requireCapitalizedConstructors": true,
+  "requireDotNotation": true,
+  "requireSemicolons": true,
+
+  "disallowSpacesInFunction": {
+    "beforeOpeningRoundBrace": true
+  },
+  "disallowSpacesInsideArrayBrackets": {
+    "allExcept": [ "[", "]", "{", "}" ]
+  },
+  "disallowSpacesInsideParentheses": true,
+  "disallowSpacesInCallExpression": true,
+  "disallowSpaceAfterObjectKeys": true,
+  "disallowSpaceAfterPrefixUnaryOperators": true,
+  "disallowSpaceBeforePostfixUnaryOperators": true,
+  "disallowSpaceBeforeBinaryOperators": [
+    ","
+  ],
+  "requireSpacesInConditionalExpression": true,
+  "requireSpaceBeforeBlockStatements": true,
+  "requireSpacesInForStatement": true,
+  "requireSpaceBetweenArguments": true,
+  "requireSpaceAfterKeywords": true,
+  "requireSpaceBeforeKeywords": true,
+  "requireSpaceBeforeBinaryOperators": true,
+  "requireSpaceAfterBinaryOperators": true,
+  "requireSpaceBeforeObjectValues": true,
+
+  "requireCurlyBraces": true,
+  "requireDollarBeforejQueryAssignment": true,
+  "safeContextKeyword": "self",
+  "validateLineBreaks": "LF",
+  "validateQuoteMarks": "'",
+  "validateIndentation": "\t"
+}

@@ -18,5 +18,14 @@
   },
   "dependencies": {
     "pixi.js": "^2.2.9"
+  },
+  "peerDependencies": {
+    "pixi.js": "*"
+  },
+  "devDependencies": {
+    "babel-core": "^5.0.12",
+    "babel-loader": "^5.0.0",
+    "jscs": "^1.12.0",
+    "webpack": "^1.8.2"
   }
 }
