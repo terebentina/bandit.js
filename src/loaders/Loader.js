@@ -1,20 +1,20 @@
 //import AudioLoader from './AudioLoader';
 import EventEmitter from '../EventEmitter';
 
+let loadersByType = {
+	image: PIXI.ImageLoader,
+	//audio: AudioLoader,
+	json: PIXI.JsonLoader,
+	atlas: PIXI.AtlasLoader,
+	anim: PIXI.SpineLoader,
+	xml: PIXI.BitmapFontLoader,
+	fnt: PIXI.BitmapFontLoader
+};
+
 class Loader extends EventEmitter {
 	constructor(resources) {
 		super();
 		this.resources = resources;
-
-		this.loadersByType = {
-			image: PIXI.ImageLoader,
-			//audio: AudioLoader,
-			json: PIXI.JsonLoader,
-			atlas: PIXI.AtlasLoader,
-			anim: PIXI.SpineLoader,
-			xml: PIXI.BitmapFontLoader,
-			fnt: PIXI.BitmapFontLoader
-		};
 	}
 
 	load() {
@@ -24,7 +24,7 @@ class Loader extends EventEmitter {
 
 		for (let i = 0; i < this.resources.length; i++) {
 			let resource = this.resources[i];
-			let Constructor = this.loadersByType[resource.type];
+			let Constructor = loadersByType[resource.type];
 			if (!Constructor) {
 				throw new Error(`${resource.type} is an unsupported file type`);
 			}

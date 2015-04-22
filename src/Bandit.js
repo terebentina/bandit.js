@@ -31,5 +31,4 @@ let bandit = {
 
 PIXI.Point = bandit.Point;
 
-export game;
 export default bandit;

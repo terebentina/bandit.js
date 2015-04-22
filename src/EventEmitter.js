@@ -1,11 +1,13 @@
-let EventEmitter = {
-	_listeners: {},
+class EventEmitter {
+	constructor() {
+		this._listeners = {};
+	}
 
-	listeners: function listeners(eventName) {
+	listeners(eventName) {
 		return this._listeners[eventName] ? this._listeners[eventName].slice() : [];
-	},
+	}
 
-	emit: function emit(eventName, data) {
+	emit(eventName, data) {
 		//backwards compat with old method ".emit({ type: 'something' })"
 		if (typeof eventName === 'object') {
 			data = eventName;
@@ -46,14 +48,14 @@ let EventEmitter = {
 		}
 
 		return this;
-	},
+	}
 
-	on: function on(eventName, fn) {
+	on(eventName, fn) {
 		(this._listeners[eventName] = this._listeners[eventName] || []).push(fn);
 		return this;
-	},
+	}
 
-	once: function once(eventName, fn) {
+	once(eventName, fn) {
 		let self = this;
 
 		function onceHandlerWrapper() {
@@ -63,9 +65,9 @@ let EventEmitter = {
 		onceHandlerWrapper._originalHandler = fn;
 
 		return this.on(eventName, onceHandlerWrapper);
-	},
+	}
 
-	off: function off(eventName, fn) {
+	off(eventName, fn) {
 		if (!this._listeners[eventName])
 			return this;
 
@@ -82,9 +84,9 @@ let EventEmitter = {
 		}
 
 		return this;
-	},
+	}
 
-	removeAllListeners: function removeAllListeners(eventName) {
+	removeAllListeners(eventName) {
 		delete this._listeners[eventName];
 		return this;
 	}
