@@ -1,7 +1,7 @@
 const BANDIT_VERSION = '0.0.1';
 let game = {};
 
-function init(width = 800, height = 600) {
+function init(width = window.innerWidth, height = window.innerHeight) {
 	game.renderer = PIXI.autoDetectRenderer(width, height);
 	document.body.appendChild(game.renderer.view);
 	//requestAnimationFrame(animate);
@@ -24,12 +24,12 @@ let bandit = {
 	DisplayObjectContainer: require('./display/DisplayObjectContainer'),
 	Stage: require('./display/Stage'),
 	Sprite: require('./display/Sprite'),
-	AssetLoader: PIXI.AssetLoader,
 
-	//Loader: require('./loaders/Loader'),
+	Loader: require('./loaders/Loader'),
 	StageManager: require('./StageManager'),
 };
 
 PIXI.Point = bandit.Point;
 
+export game;
 export default bandit;
