@@ -8,12 +8,6 @@ class EventEmitter {
 	}
 
 	emit(eventName, data) {
-		//backwards compat with old method ".emit({ type: 'something' })"
-		if (typeof eventName === 'object') {
-			data = eventName;
-			eventName = eventName.type;
-		}
-
 		//ensure we are using a real pixi event
 		if (!data || data.__isEventObject !== true) {
 			data = new PIXI.Event(this, eventName, data);

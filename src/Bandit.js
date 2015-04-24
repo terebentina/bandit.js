@@ -2,7 +2,7 @@ const BANDIT_VERSION = '0.0.1';
 let game = {};
 
 function init(width = window.innerWidth, height = window.innerHeight) {
-	game.renderer = PIXI.autoDetectRenderer(width, height);
+	game.renderer = PIXI.autoDetectRenderer(width, height, {transparent: true});
 	document.body.appendChild(game.renderer.view);
 	//requestAnimationFrame(animate);
 	return game;
@@ -20,7 +20,7 @@ let bandit = {
 	Point: require('./geom/Point'),
 	//Point: PIXI.Point,
 	Rectangle: PIXI.Rectangle,
-	DisplayObject: require('./display/DisplayObject'),
+	//DisplayObject: require('./display/DisplayObject'),
 	DisplayObjectContainer: require('./display/DisplayObjectContainer'),
 	Stage: require('./display/Stage'),
 	Sprite: require('./display/Sprite'),
